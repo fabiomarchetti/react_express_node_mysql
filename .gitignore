@@ -1,11 +1,20 @@
-# generated files
-target/
-generated/
+# Created by https://www.toptal.com/developers/gitignore/api/react
+# Edit at https://www.toptal.com/developers/gitignore?templates=react
 
-# dependencies
-Dependencies.toml
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
 
-# config files
-Config.toml
-# the config files used for testing, Uncomment the following line if you want to commit the test config files
-#!**/tests/Config.toml
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+# End of https://www.toptal.com/developers/gitignore/api/react
