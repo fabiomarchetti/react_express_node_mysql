@@ -1,5 +1,4 @@
 nota su readMe# 
-react_express_node_mysql
-react_express_node_mysql
-react_express_node_mysql
-react_express_node_mysql
+
+
+Portale di ginnastica cognitiva on database in mysql
