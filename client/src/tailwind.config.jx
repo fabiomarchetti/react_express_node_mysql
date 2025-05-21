@@ -1,0 +1,7 @@
+theme: {
+    extend: {
+        animation: {
+            'ruota' : 'spin 5s ease-in infinite'
+        }
+    }
+}
