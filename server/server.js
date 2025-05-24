@@ -26,7 +26,9 @@ app.get('/api', (req, res) => {
       'pera', 
       'clementina', 
       'mandarino', 
-      'ultimo']});
+      'ultimo',
+      'ultimissimo'
+    ]});
   });
 
 
