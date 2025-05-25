@@ -1,37 +1,46 @@
 const express = require('express');
+const mysql = require('mysql2')
+const cors = require('cors');
+const path = require('path')
+
+
 const app = express();
 
-const cors = require('cors');
-const corsOptions = {
-  origin: ['http://localhost:5173'], //locazione del client
-};
-
-
-app.use(cors(corsOptions));
-
+app.use(express.static(path.join(__dirname, "public")))
+app.use(cors())
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+const port = 8080
 
-app.get('/api', (req, res) => {
-    res.json({fruits: [
-      'apple', 
-      'banana', 
-      'orange', 
-      'fragola', 
-      'kiwi', 
-      'mela', 
-      'pera', 
-      'clementina', 
-      'mandarino', 
-      'ultimo',
-      'ultimissimo'
-    ]});
-  });
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "filohori",
+  database: "meding"
+})
+//endpoint
+app.post('/register', (req, res)=>{
+  sql = "INSERT INTO pazienti ('nomePaziente', 'cognomePaziente', 'codFiscPaziente', 'dataNascita', 'luogoNascita', 'telefonoPaziente', 'emailPaziente', 'residenzaPaziente', 'viaPaziente') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  const values = [
+    req.body.nomePaziente,
+    req.body.cognomePaziente,
+    req.body.codFiscPaziente,
+    req.body.dataNascita,
+    req.body.luogoNascita,
+    req.body.telefonoPaziente,
+    req.body.emailPaziente,
+    req.body.residenzaPaziente,
+    req.body.viaPaziente
+  ]
+  db.query(sql.values, (err, result)=>{
+    if(err) return res.json({message: "qualche cosa è andato storto" + err})
+      return res.json({success: "Il paziente è stato inserito in anagrafica"})
+  })
+})
 
 
-app.listen(8080, () => {
-  console.log('Server is running on port 8080');
-});  
+
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+}); 

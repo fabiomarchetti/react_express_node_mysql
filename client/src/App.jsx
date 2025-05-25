@@ -15,6 +15,8 @@ import Register from './pages/Register';
 import Single from './pages/Single';
 import Write from './pages/Write';
 
+
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -27,8 +29,6 @@ const Layout = () => {
     </>
   )
 }
-
-
 const router = createBrowserRouter([
   { path: "/", 
     element: <Layout />,
@@ -62,7 +62,7 @@ function App() {
   return (
     <>
     <div className='m-5 p-5 border-2 border-teal-700'>
-        <div className='p-3 border-2 border-yellow-300'>
+        <div className='p-3'>
           <RouterProvider router = {router} />
         </div>
       </div>

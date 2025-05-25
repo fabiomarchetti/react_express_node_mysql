@@ -50,9 +50,9 @@ const Home = () => {
         </p>
       </div>
 
-      <div class="m-5 p-5 bg-linear-to-r/increasing from-indigo-500 to-teal-400"></div>
-      <div class="w-[200px] h-[200px] m-5 p-5 rounded-full bg-linear-to-t from-pink-800 via-yellow-500 to-teal-400"></div>
-      <div class="w-[200px] h-[200px] m-5 p-5 rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90%"></div>
+      <div className="m-5 p-5 bg-linear-to-r/increasing from-indigo-500 to-teal-400"></div>
+      <div className="w-[200px] h-[200px] m-5 p-5 rounded-full bg-linear-to-t from-pink-800 via-yellow-500 to-teal-400"></div>
+      <div className="w-[200px] h-[200px] m-5 p-5 rounded-full bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90%"></div>
 
       {/* SVILUPPO CONTENUTO */}
 
