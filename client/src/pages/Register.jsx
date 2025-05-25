@@ -1,21 +1,80 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "flowbite-react";
+
 const Register = () => {
   return (
     <>
-    <div className='mt-10 p-5 bg-white rounded-4xl text-blue-900 flex flex-col items-center justify-center h-100vh w-full'>
-      <h1 className='mb-3 text-green-800'>inserisci il tuo login</h1>
-      <form className='flex flex-col items-center justify-center bg-white gap-5' action="">
-        <input className='p-2 border-2 border-red-600 rounded-xl' required type="text" placeholder='username' />
-        <input className='p-2 border-2 border-red-600 rounded-xl' required type="password" placeholder='password' />
-        <input className='p-2 border-2 border-red-600 rounded-xl' required type="email" placeholder='email' />
-        <button className='mb-2 p-2 rounded-3xl text-white w-[200px] bg-teal-500' type="submit">Registrati</button>
-        <span className='text-xl text-teal-500'>Se sei già registrato</span>
-        <p className='text-xl text-teal-800'><Link to="/login">vai al Login</Link></p>
-        </form> 
-    </div>
-    </>
-  )
-}
+      <form>
+        <div className="mt-5 p-5 text-3xl text-blue-900 flex flex-col items-center justify-center w-full">
+          <p>INSERISCI DATI PAZIENTE</p>
+        </div>
 
-export default Register
+        <div class="mt-10 mr-5 grid gap-6 mb-6 md:grid-cols-3">
+          
+          <div>
+            <label for="nome" className="text-center block mb-2 text-xl font-medium text-gray-900">Nome</label>
+            <input type="text" id="nome" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci il nome" required />
+          </div>
+
+          <div>
+            <label for="cognome" className="text-center block mb-2 text-xl font-medium text-gray-900">Cognome</label>
+            <input type="text" id="cognome" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci il cognome" required />
+          </div>
+          <div>
+            <label for="codfisc" className="text-center block mb-2 text-xl font-medium text-gray-900">Codice FIscale</label>
+            <input type="text" id="cognome" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci il codice fiscale" required />
+          </div>
+          <div>
+            <label for="datadinascita" className="text-center block mb-2 text-xl font-medium text-gray-900">data di nascita</label>
+            <input type="text" id="datadinascita" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="giorno/mese/anno" required />
+          </div>
+
+          <div>
+            <label for="luogonascita" className="text-center block mb-2 text-xl font-medium text-gray-900">Luogo di nascita</label>
+            <input type="text" id="luogodinascita" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci luogo di nascita" required />
+          </div>
+
+
+
+          <div>
+            <label for="numtel" className="text-center block mb-2 text-xl font-medium text-gray-900">Num. di telefono</label>
+            <input type="text" id="numtel" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci il numero di telefono" required />
+          </div>
+          <div>
+            <label for="email" className="text-center block mb-2 text-xl font-medium text-gray-900">e-mail</label>
+            <input type="email" id="email" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="inserisci email" />
+          </div>
+          <div>
+            <label for="cittaresidenza" className="text-center block mb-2 text-xl font-medium text-gray-900">Città di residenza</label>
+            <input type="text" id="cittaresidenza" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="città di residenza" required />
+          </div>
+          <div>
+            <label for="viaresidenza" className="text-center block mb-2 text-xl font-medium text-gray-900">Via di residenza e num. civico</label>
+            <input type="text" id="viaresidenza" className="border border-gray-300 rounded-lg block w-full p-2.5" placeholder="via di residenza e numero" required/>
+          </div>
+        </div>
+
+        <div className="mt-5 p-5 text-3xl text-blue-900 flex flex-col items-center justify-center w-full">
+          <button type="submit" className="px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>Registra Paziente</button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </form>
+
+      
+    </>
+  );
+};
+
+export default Register;

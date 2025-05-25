@@ -2,7 +2,7 @@ import React from 'react'
 
 const Write = () => {
   return (
-    <div>write</div>
+    <div>write 456 123</div>
   )
 }
 

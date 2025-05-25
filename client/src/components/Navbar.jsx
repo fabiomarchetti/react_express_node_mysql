@@ -1,27 +1,56 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../img/logo.jpg'
+import Logo from '../img/meding-logo.png'
 
 const Navbar = () => {
   return (
-    <div className='py-2 px-5 flex flex-row justify-between bg-teal-600 border-amber-600 border-2'>
-        <div className=''>
-          <Link to="/"><img className='w-[100px]' src={Logo} alt="logo" /></Link>
-        </div>
-        <div className=''></div>
-        <div className='h-[70px] p-5 mx-5 bg-teal-600 flex flex-row justify-center gap-x-5'>
-          <Link className='text-white font-bold' to="/?cat=art">ART</Link>
-          <Link className='text-white font-bold' to="/?cat=science">SCIENCE</Link>
-          <Link className='text-white font-bold' to="/?cat=technology">TECHNOLOGY</Link>
-          <Link className='text-white font-bold' to="/?cat=cinema">CINEMA</Link>
-          <Link className='text-white font-bold' to="/?cat=design">DESIGN</Link>
-          <Link className='text-white font-bold' to="/?cat=food">FOOD</Link>
-          <span className='text-white font-bold'>John</span>
-          <Link to="/login" className='text-white font-bold'>Login</Link>
-          <Link className='text-yellow-400 font-bold' to="/write">Write</Link>
-        </div>
+    <>
+    
+    
+
+<nav class="bg-white border-gray-200 ">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link to="/"><img className='w-[300px] m-3' src={Logo} alt="logo" /></Link>
+
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+    </button>
+
+
+
+    <div class="bg-[#7cc8df] rounded-4xl w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4  mt-4  rounded-lg md:flex-row ">
+        <li>
+          <Link to="/" className="block py-2 px-3">Home</Link>
+        </li>
+        <li>
+          <Link to="/register" className="block py-2 px-3">Registra Paziente</Link>
+        </li>
+        <li>
+          <Link to="/register" className="block py-2 px-3">Cerca Paziente</Link>
+        </li>
+        <li>
+          <Link to="/" className="block py-2 px-3">Elenco pazienti</Link>
+        </li>
+
+        <li>
+          <Link to="/register" className="block py-2 px-3">Login</Link>
+        </li>
+        <li>
+          <Link to="/register" className="block py-2 px-3">Logout</Link>
+        </li>
+        <li>
+          <Link to="/register" className="block py-2 px-3">Login</Link>
+        </li>
+      </ul>
     </div>
-  )
+  </div>
+</nav>
+    </>
+
+    
+
+    )
 }
 
 export default Navbar
